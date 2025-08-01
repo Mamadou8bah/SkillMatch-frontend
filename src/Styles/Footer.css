@@ -1,0 +1,113 @@
+.footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    width: 100dvw;
+    padding: 2rem 1rem;
+    background-color: #00b3d9;
+    border-top: 1px solid #dcdcdc;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+    max-width: 250px;
+    height: 3rem;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+.footer h3 {
+    color: rgb(20, 20, 20);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.footer p {
+    color: #171616;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}   
+.footer a {
+    color: #181616;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+.footer a:hover {
+    color: #00d9f5;
+}
+.footer .social-icons {
+    display: flex;
+    gap: 1rem;
+}
+.footer .social-icons a {
+    color: #181616;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+.footer .social-icons a:hover {
+    color: #00d9f5;
+}
+.footer .social-icons i {
+    margin: 0 0.5rem;
+}
+.footer .social-icons i:hover {
+    transform: scale(1.1);
+}
+.footer .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.footer .contact-info a {
+    color: #181616;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+.footer .contact-info a:hover {
+    color: #00d9f5;
+}
+.footer .contact-info p {
+    color: #181616;
+    font-size: 0.9rem;
+    margin: 0;
+}
+.footer .contact-info span {
+    color: #181616;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+.footer .contact-info span i {
+    margin-right: 0.5rem;
+}
+.footer .contact-info span a {
+    color: #00d9f5;
+    text-decoration: none;
+}
+.footer .contact-info span a:hover {
+    text-decoration: underline;
+}
+.quick-links{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+.footer .quick-links a {
+    color: #181616;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+.footer .quick-links a:hover {
+    color: #00d9f5;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+

@@ -1,0 +1,378 @@
+.home-page{
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    width:100dvw;
+}
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem;
+    height: 100vh;
+    background-image: url('../Assets/skillmatch-hero.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #232222;
+}
+.hero-heading {
+    margin-bottom: 2rem;
+}
+.hero-heading h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    font-style: oblique;
+    margin-bottom: 0.4rem;
+    background: linear-gradient(90deg, #46534e, #00d9f5, #6365b3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 20px rgba(0, 255, 191, 0.25);
+    transition: all 0.4s ease-in-out;
+}
+
+.hero-heading p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-display:block;
+    color: #020202;
+    margin-bottom: 1rem;
+}
+.search-jobs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    width: 100%;
+}
+.search-jobs input{
+    width: 100%;
+    max-width: 600px;
+    height: 3rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    font-size: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+}
+.search-jobs input:focus {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+.search-jobs button {
+    padding: 0.5rem 1rem;
+    height: 3rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #00d9f5;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.primary-button {
+    background-color: #00d9f5;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 10px;
+    height: 3rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+.secondary-button {
+    background-color: #f0f0f0;
+    color: #434343;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 10px;
+    height: 3rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+.featured-jobs {
+    margin: 2rem auto;
+    width: 100dvw;
+    display: flex;
+    flex-direction: column;
+}
+.featured-jobs-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 2rem;
+}
+.featured-jobs-header h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #434343;
+}
+.featured-jobs-header a {
+    font-size: 1rem;
+    color: #00d9f5;
+    text-decoration: none;
+    display: block;
+    align-items: center;
+}
+.featured-jobs-header a svg {
+    width: 0.7rem;
+    height: 0.7rem;
+    fill: #00d9f5;;
+}
+.featured-jobs-header a:hover {
+    text-decoration: underline;
+}
+.featured-jobs-header a svg:hover {
+    fill: #00b3d9;
+}
+.job-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+}
+.featured-jobs-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.featured-jobs-footer a {
+    font-size: 1rem;
+    color: white;
+    background-color: #00d9f5;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    border: #00b3d9 solid 1px;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.featured-jobs-footer a:hover {
+    background-color: #031f25;
+    color: white;
+}
+.featured-candidates {
+    margin: 2rem auto;
+    width: 100dvw;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+.featured-candidates-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.featured-candidates-header h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #434343;
+}
+.featured-candidates-header a {
+    font-size: 1rem;
+    color: #00d9f5;
+    text-decoration: none;
+    display: block;
+    align-items: center;
+}
+.featured-candidates-header a svg {
+    width: 0.7rem;
+    height: 0.7rem;
+    fill: #00d9f5;;
+}
+.featured-candidates-header a:hover {
+    text-decoration: underline;
+}
+.featured-candidates-header a svg:hover {
+    fill: #00b3d9;
+}
+.featured-candidates-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.featured-candidates-footer a {
+    font-size: 1rem;
+    color: white;
+    background-color: #00d9f5;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    border: #00b3d9 solid 1px;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.featured-candidates-footer a:hover {
+    background-color: #031f25;
+    color: white;
+}
+.testimonials {
+    margin: 2rem auto;
+    width: 100dvw;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+.testimonial-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+}
+.testimonial-card {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: box-shadow 0.3s ease;
+}
+.testimonial-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.testimonial-image {
+    margin-right: 1rem;
+}
+.testimonial-text {
+    display: flex;
+    flex-direction: column;
+}
+.testimonial-text p {
+    font-size: 1rem;
+    color: #434343;
+    margin: 0;
+}
+.name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #00d9f5;
+    margin-top: 0.5rem;
+}
+
+.profession{
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.2rem;
+}
+.advert{
+    margin: 2rem auto;
+    width: 50dvw;
+    padding: 2rem;
+    height: 14rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #00d9f5;
+}
+.advert h2 {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+.advert p {
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.advert-button {
+    background-color: white;
+    color: #00d9f5;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.advert-button:hover {
+    background-color: #00b3d9;
+    color: white;
+}
+.contact-us {
+    margin: 2rem auto;
+    width: 95%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.contact-us h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #434343;
+    margin-bottom: 1rem;
+}
+.contact-us p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+.contact-cards{
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    justify-content: center;
+    align-self: center;
+    gap: 1rem;
+    width: 100%;
+    text-align: center;
+}
+.contact-card {
+    background-color: #f0f0f0;
+    padding: 1rem;
+    text-align: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+}
+.contact-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.contact-card svg {
+    width: 3rem;
+    height: 3rem;
+    fill: #00d9f5;
+    margin-bottom: 0.5rem;
+}
+.contact-card p{
+    font-size: 1rem;
+    color: #434343;
+    margin: 1.5rem 0;
+}
+.contact-card a {
+    font-size: 1rem;
+    color: #eee;
+    text-decoration: none;
+    background-color: #00b3d9;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 1rem;
+}
+.footer{
+    width: 100dvw;
+}

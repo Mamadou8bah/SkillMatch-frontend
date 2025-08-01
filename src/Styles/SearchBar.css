@@ -1,0 +1,112 @@
+.search-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    margin: 2rem auto 1rem auto;
+    width: 95%;
+    max-width: 800px;
+    gap: 1rem;
+}
+
+.search-bar input[type="text"] {
+    border: none;
+    height: 100%;
+    outline: none;
+    flex: 1;
+    background-color: rgb(237, 237, 237);
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+}
+
+.search-bar input[type="text"]:focus {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filter{
+    width: 3rem;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(237, 237, 237);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.filter:hover {
+    background-color: rgb(225, 225, 225);
+}
+
+.filter svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: rgb(25, 25, 145);
+    background: none;
+}
+
+.button {
+    width: auto;
+    min-width: 5.6rem;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(6, 17, 38);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    background-color: rgb(8, 20, 42);
+    transform: translateY(-1px);
+}
+
+.button button {
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0 1rem;
+}
+
+@media (max-width: 768px) {
+    .search-bar {
+        height: 2.5rem;
+        margin: 1rem auto 0.5rem auto;
+        gap: 0.5rem;
+        width: 98%;
+    }
+    
+    .search-bar input[type="text"] {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .filter {
+        width: 2.5rem;
+    }
+    
+    .filter svg {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+    
+    .button {
+        min-width: 4rem;
+    }
+    
+    .button button {
+        font-size: 0.9rem;
+        padding: 0 0.5rem;
+    }
+}
