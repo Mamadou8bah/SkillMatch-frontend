@@ -5,10 +5,15 @@ import { useState } from 'react';
 
 function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  }
 
   return (
     <header className="header">
@@ -48,10 +53,21 @@ function Header() {
             Companies</a></li>
         </ul>
       </div>
-      <div className="profile">
-        <img src={profileImg} alt="Profile" />
-        <span>Mamadou</span>
+      <div className="container">
+        <div className="profile" onClick={toggleDropdown}>
+          <img src={profileImg} alt="Profile" />
+        </div>
+        <div className={`dropdown-profile-menu ${isDropdownOpen ? 'open' : ''}`} onClick={toggleDropdown}>
+          <a href="/profile" onClick={toggleDropdown}>My Profile</a>
+          <a href="/application" onClick={toggleDropdown}>My Applications</a>
+          <a href="/messages" onClick={toggleDropdown}>Messages</a>
+          <a href="/settings" onClick={toggleDropdown}>Settings</a>
+          <a href="/logout" onClick={toggleDropdown}>Logout</a>
+        </div>
       </div>
+    
+      
+
     </header>
   );
 }

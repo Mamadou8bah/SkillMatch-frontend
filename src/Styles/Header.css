@@ -10,6 +10,27 @@
     height: 80px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
+.dropdown-profile-menu {
+    position: absolute;
+    top: 5rem;
+    right: 1.2rem;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    width: 20%;
+    z-index: 1000;
+    display: none;
+    flex-direction: column;
+    padding: 1rem;
+}
+.dropdown-profile-menu.open {
+    display: flex;
+}
+.dropdown-profile-menu a{
+    text-decoration: none;
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
 
 .logo {
     display: flex;
@@ -207,6 +228,26 @@
     
     .profile span {
         font-size: 0.9rem;
+    }
+    .dropdown-profile-menu {
+    position: absolute;
+    top: 4rem;
+    left: 0.6rem;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    width: 60%;
+    z-index: 1000;
+    flex-direction: column;
+    padding: 1rem;
+    }
+    .dropdown-profile-menu a {
+        text-decoration: none;
+        margin: 0.5rem 0;
+        font-size: 1.2rem;
+        color: #343a40;
+        transition: all 0.3s ease;
+       
     }
 }
 
