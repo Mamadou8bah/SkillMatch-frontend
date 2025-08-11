@@ -129,10 +129,8 @@ ul {
 @media (max-width: 560px){
     .footer-inner{
         gap: 1.25rem;
-        padding: 1.25rem 1rem;
-        grid-template-columns: 1fr;
+        padding: 1.5rem 1rem;
     }
-    .logo{ height: 2.6rem; max-width: 200px; }
-    .logo img{ width: 100%; height: auto; }
+    .logo{ height: 2.8rem; }
 }
 

@@ -3,7 +3,6 @@
     flex-direction: row;
     height: 100vh;
     background-color: #f0f2f5;
-    overflow-x: hidden;
 }
 
 .main-content {
