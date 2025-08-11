@@ -18,3 +18,33 @@
     align-items: center;
     margin: 1rem 1rem;
 }
+.filter-profession label {
+    margin-right: 0.5rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+.filter-profession select{
+    border-radius: 5px;
+    padding: 0.5rem;
+    border: none;
+    background-color: #f0f0f0;
+    font-size: 1rem;
+}
+.option {
+    padding: 0.5rem;
+    border: 1px solid #cccccc;
+}
+.option:hover {
+    background-color: #f0f0f0;
+}
+.option:focus{
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+.profession-filter:focus-within {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+    outline: none;
+
+}

@@ -18,6 +18,7 @@ function App() {
           <Route path="home" element={<HomePage />} />
           <Route path="jobs" element={<JobsPage />} />
           <Route path="employees" element={<EmployeesPage />} />
+          <Route path="*" element={<div>Page Not Found, We are sorry!</div>} />
         </Routes>
       </main>
     </div>
