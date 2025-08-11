@@ -1,19 +1,26 @@
 .footer {
+    width: 100%;
+    background: linear-gradient(180deg, #00b3d9 0%, #009abf 100%);
+    border-top: 1px solid rgba(255,255,255,0.2);
+    color: #f7f7f7;
+}
+
+.footer-inner{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 2rem;
-    width: 100dvw;
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 2rem 1rem;
-    background-color: #00b3d9;
-    border-top: 1px solid #dcdcdc;
 }
 
 .logo {
     display: flex;
     align-items: center;
     padding: 1rem 0;
-    max-width: 250px;
-    height: 3rem;
+    max-width: 260px;
+    height: 3.2rem;
 }
 
 .logo img {
@@ -22,35 +29,35 @@
     object-fit: contain;
 }
 .footer h3 {
-    color: rgb(20, 20, 20);
+    color: #ffffff;
     font-size: 1.5rem;
     margin-bottom: 1rem;
 }
 .footer p {
-    color: #171616;
+    color: rgba(255,255,255,0.9);
     font-size: 0.9rem;
     line-height: 1.5;
 }   
 .footer a {
-    color: #181616;
+    color: rgba(255,255,255,0.92);
     text-decoration: none;
     font-size: 0.9rem;
     transition: color 0.3s ease;
 }
 .footer a:hover {
-    color: #00d9f5;
+    color: #e9fcff;
 }
 .footer .social-icons {
     display: flex;
     gap: 1rem;
 }
 .footer .social-icons a {
-    color: #181616;
+    color: rgba(255,255,255,0.92);
     font-size: 1.5rem;
     transition: color 0.3s ease;
 }
 .footer .social-icons a:hover {
-    color: #00d9f5;
+    color: #e9fcff;
 }
 .footer .social-icons i {
     margin: 0 0.5rem;
@@ -64,20 +71,20 @@
     gap: 0.5rem;
 }
 .footer .contact-info a {
-    color: #181616;
+    color: rgba(255,255,255,0.92);
     font-size: 0.9rem;
     text-decoration: none;
 }
 .footer .contact-info a:hover {
-    color: #00d9f5;
+    color: #e9fcff;
 }
 .footer .contact-info p {
-    color: #181616;
+    color: rgba(255,255,255,0.9);
     font-size: 0.9rem;
     margin: 0;
 }
 .footer .contact-info span {
-    color: #181616;
+    color: rgba(255,255,255,0.92);
     font-size: 0.9rem;
     margin-top: 0.5rem;
 }
@@ -85,7 +92,7 @@
     margin-right: 0.5rem;
 }
 .footer .contact-info span a {
-    color: #00d9f5;
+    color: #e9fcff;
     text-decoration: none;
 }
 .footer .contact-info span a:hover {
@@ -98,16 +105,34 @@
     text-decoration: none;
 }
 .footer .quick-links a {
-    color: #181616;
+    color: rgba(255,255,255,0.92);
     font-size: 0.9rem;
     text-decoration: none;
 }
 .footer .quick-links a:hover {
-    color: #00d9f5;
+    color: #e9fcff;
 }
 ul {
     list-style: none;
     padding: 0;
     margin: 0;
+}
+
+.footer-bottom{
+    border-top: 1px solid rgba(255,255,255,0.18);
+    padding: 0.85rem 1rem;
+    text-align: center;
+    color: rgba(255,255,255,0.9);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 560px){
+    .footer-inner{
+        gap: 1.25rem;
+        padding: 1.25rem 1rem;
+        grid-template-columns: 1fr;
+    }
+    .logo{ height: 2.6rem; max-width: 200px; }
+    .logo img{ width: 100%; height: auto; }
 }
 

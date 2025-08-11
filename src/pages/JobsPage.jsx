@@ -11,7 +11,6 @@ function JobsPage({ onMenuToggle }) {
       display: 'flex', 
       flexDirection: 'column'
     }}>
-      <Header onMenuToggle={onMenuToggle} />
       <SearchBar />
       <div style={{
         padding: '1rem 1rem 0.5rem 1rem',
