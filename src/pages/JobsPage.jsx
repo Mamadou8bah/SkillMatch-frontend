@@ -23,7 +23,7 @@ function JobsPage() {
         list = [...list].sort((a,b)=> a.salary - b.salary); break;
       case 'title':
         list = [...list].sort((a,b)=> a.title.localeCompare(b.title)); break;
-      default: // recent (postedDate desc)
+      default: 
         list = [...list].sort((a,b)=> new Date(b.postedDate) - new Date(a.postedDate));
     }
     return list;
