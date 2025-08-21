@@ -1,13 +1,29 @@
 import '../Styles/SearchBar.css';
-function SearchBar() {
+
+function SearchBar({ value, onChange, onSubmit, placeholder = 'Search for jobs...' }) {
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter' && onSubmit) {
+      onSubmit();
+    }
+  };
+
   return (
-    <div className="search-bar">
-      <input type="text" placeholder="Search for jobs..." />
-      <div className="filter">
-        <svg xmlns="http://www.w3.org/2000/svg" height="24px"  viewBox="0 -960 960 960" width="30px" fill="#1f1f1f" ><path d="M520-600v-80h120v-160h80v160h120v80H520Zm120 480v-400h80v400h-80Zm-400 0v-160H120v-80h320v80H320v160h-80Zm0-320v-400h80v400h-80Z"/></svg>
-      </div>
-      <div className="button">
-        <button>Find Jobs</button>
+    <div className="search-bar" role="search">
+      <input
+        type="text"
+        placeholder={placeholder}
+        value={value}
+        onChange={(e) => onChange && onChange(e.target.value)}
+        onKeyDown={handleKeyDown}
+        aria-label="Search jobs"
+      />
+      <div className="button" title="Search">
+        <button type="button" onClick={onSubmit} aria-label="Search jobs">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+        </button>
       </div>
     </div>
   );

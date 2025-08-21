@@ -143,9 +143,9 @@
 .featured-jobs-header a svg:hover {
     fill: #00b3d9;
 }
-.job-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+.job-list ul{
+    display: flex;
+    flex-direction: row;
     gap: 1rem;
 }
 .featured-jobs-footer {
@@ -441,6 +441,10 @@
     justify-content: center;
     gap: 1rem;
     width: 100%;
+}
+.job-list{
+    display: flex;
+    flex-direction: row;
 }
 .contact-card {
     background: #ffffff;

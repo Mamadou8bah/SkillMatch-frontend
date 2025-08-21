@@ -7,6 +7,7 @@ import { useState } from 'react';
 import { Route,Routes } from 'react-router-dom';
 import Header from './components/Header';
 import { EmployeesPage } from './pages/EmployeesPage';
+import { CompaniesPage } from './pages/CompaniesPage';
 function App() {
   return (
     <div className="App">
@@ -18,6 +19,7 @@ function App() {
           <Route path="home" element={<HomePage />} />
           <Route path="jobs" element={<JobsPage />} />
           <Route path="employees" element={<EmployeesPage />} />
+          <Route path="companies" element={<CompaniesPage />} />
           <Route path="*" element={<div>Page Not Found, We are sorry!</div>} />
         </Routes>
       </main>

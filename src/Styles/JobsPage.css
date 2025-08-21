@@ -1,9 +1,11 @@
 .jobs-page {
     background-color: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    margin: 0.3rem;
-    min-height: calc(100vh - 2rem);
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04), 0 6px 24px -8px rgba(0,0,0,0.08);
+    margin: 0.5rem;
+    min-height: calc(100vh - 1rem);
+    display: flex;
+    flex-direction: column;
 }
 
 .jobs {
@@ -28,23 +30,73 @@
     background-color: #d0d0d0;
 }
 
+
+.job-list-page {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.25rem;
+    padding: 0.5rem 0.75rem 1.25rem;
+}
+
+
+.job-card {
+    margin: 0; 
+    border: 1px solid #f1f1f1;
+    transition: transform 0.18s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.job-card:hover {
+    transform: translateY(-3px);
+    border-color: #e2e8f0;
+    box-shadow: 0 6px 18px -6px rgba(0,0,0,0.12);
+}
+
+.jobs-toolbar select:focus {
+    outline: 2px solid #00d9f5;
+    outline-offset: 2px;
+}
+
+.jobs-toolbar select {
+    background: linear-gradient(#ffffff, #f7f9fb);
+    border: 1px solid #d9e1e7 !important;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.04);
+    color: #2b3945;
+    font-weight: 500;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
+}
+
+.jobs-toolbar select:hover {
+    border-color: #c2ccd3;
+}
+
+.jobs-toolbar select:active {
+    background: #eef3f6;
+}
+
+.search-bar .button button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.55rem 0.9rem;
+}
+
+.search-bar .button svg {
+    stroke: #fff;
+}
+
 @media (max-width: 768px) {
     .jobs-page {
         margin: 0.5rem;
-        border-radius: 10px;
+        border-radius: 12px;
         min-height: calc(100vh - 120px);
-        padding: 0 0.5rem !important;
+        padding: 0 0.25rem !important;
     }
-    
     .jobs {
         padding: 0.5rem !important;
     }
-    
-    .jobs-found-section {
-        padding: 0.5rem 1rem !important;
-    }
-    
-    .jobs-found-section span {
-        font-size: 1rem !important;
+    .job-list-page {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+        padding: 0.5rem 0.25rem 1rem;
     }
 }
