@@ -1,5 +1,6 @@
 import '../Styles/EmployeesPage.css';
 import { useState } from 'react';
+import SearchBar from "../components/SearchBar";
 export const EmployeesPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedJob, setSelectedJob] = useState('all');
@@ -10,10 +11,10 @@ export const EmployeesPage = () => {
   };
   return (
     <div className='employees-page'>
-        <div className="search-bar">
-            <input type="text" placeholder="Search for employees..." value={searchTerm} onChange={handleSearchChange} />
-            <button className="search-button">Search</button>
-        </div>
+      <div className="jobs-header" style={{padding:'0 1rem'}}>
+        <SearchBar
+        placeholder='Search Employees....'/>
+      </div>
        <div className="filter-profession">
             <label htmlFor="job">Profession:</label>
             <select id="job" className='profession-filter' value={selectedJob} onChange={(e) => setSelectedJob(e.target.value)}>
@@ -41,5 +42,6 @@ export const EmployeesPage = () => {
 
 
     </div>
+
   )
 }

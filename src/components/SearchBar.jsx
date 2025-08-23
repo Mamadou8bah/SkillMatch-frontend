@@ -1,6 +1,6 @@
 import '../Styles/SearchBar.css';
 
-function SearchBar({ value, onChange, onSubmit, placeholder = 'Search for jobs...' }) {
+function SearchBar({ value = '', onChange, onSubmit, placeholder = 'Search...' }) {
   const handleKeyDown = (e) => {
     if (e.key === 'Enter' && onSubmit) {
       onSubmit();
