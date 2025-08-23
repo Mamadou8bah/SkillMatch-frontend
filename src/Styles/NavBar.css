@@ -130,7 +130,7 @@
     margin-right: 0.5rem;
 }
 
-.menu::-webkit-scrollbar{
+.menu::-webkit-scrollbar {
     display: none;
 }
 
@@ -213,7 +213,8 @@
     font-size: 1rem;
     color: #0c0d0f;
 }
-p{
+
+p {
     font-size: 0.8rem;
     color: #96999c;
 }

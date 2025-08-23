@@ -31,6 +31,7 @@ export const JobDetails = () => {
         <div className="jd-header-row">
           <button className="jd-back" onClick={() => navigate(-1)} aria-label="Go back">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6" /><line x1="19" y1="12" x2="9" y2="12" /></svg>
+            <span>Back</span>
           </button>
           <div className="jd-actions-desktop">
             <button className="jd-save" title="Save job" aria-label="Save job">
@@ -56,7 +57,7 @@ export const JobDetails = () => {
                 <div className="jd-meta-tags">
                   <span className="tag soft">{job.location.type}</span>
                   <span className="tag soft">{job.level}</span>
-                  <span className="tag salary">GMD {job.salary}/Month</span>
+                  
                 </div>
               </div>
             </div>
@@ -66,12 +67,22 @@ export const JobDetails = () => {
                 <h2 className="section-title">Job Description</h2>
                 <p className="jd-description">{job.description}</p>
               </section>
+              {job.requirements?.length > 0 && (
+                <section className="jd-section">
+                  <h2 className="section-title">Requirements</h2>
+                  <ol className="jd-req-list">
+                    {job.requirements.map((req, idx) => (
+                      <li key={idx}>{req}</li>
+                    ))}
+                  </ol>
+                </section>
+              )}
               {job.tags?.length > 0 && (
                 <section className="jd-section">
                   <h2 className="section-title">Skills & Tools</h2>
                   <div className="jd-skill-tags">
                     {job.tags.map(t => (
-                      <span key={t} className="skill-tag">{t}</span>
+                      <span  key={t} className="skill-tag">#{t}</span>
                     ))}
                   </div>
                 </section>
@@ -79,7 +90,15 @@ export const JobDetails = () => {
             </div>
           </div>
 
-          <aside className="jd-side">
+       
+        </div>
+        <div className="jd-mobile-actions">
+        <button className="jd-apply full">Apply Now</button>
+      </div>
+      </div>
+      
+
+         <aside className="jd-side">
             {similarJobs.length > 0 && (
               <div className="jd-side-section">
                 <h3 className="jd-side-title">Similar Jobs</h3>
@@ -131,11 +150,6 @@ export const JobDetails = () => {
               </div>
             )}
           </aside>
-        </div>
-      </div>
-      <div className="jd-mobile-actions">
-        <button className="jd-apply full">Apply Now</button>
-      </div>
     </div>
   );
 };

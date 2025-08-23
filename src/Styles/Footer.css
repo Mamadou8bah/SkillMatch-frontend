@@ -27,6 +27,7 @@
     width: 100%;
     height: auto;
     object-fit: contain;
+    object-position: left center;
 }
 .footer h3 {
     color: #ffffff;

@@ -15,30 +15,37 @@
     top: 4.5rem;
     right: 0;
     background-color: #fff;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    border-radius: 8px;
-    min-width: 180px;
-    max-width: 220px;
-    z-index: 1000;
-    display: none;
+    box-shadow: 0 8px 28px rgba(0,0,0,0.18), 0 2px 6px rgba(0,0,0,0.12);
+    border-radius: 14px;
+    min-width: 200px;
+    max-width: 240px;
+    z-index: 1200;
+    display: flex;
     flex-direction: column;
-    padding: 1rem 0.5rem;
-    transition: opacity 0.2s;
+    padding: 0.75rem 0.5rem 0.85rem;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(6px) scale(.98);
+    transition: transform .25s cubic-bezier(.4,0,.2,1), opacity .25s;
 }
 .dropdown-profile-menu.open {
-    display: flex;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0) scale(1);
 }
 .dropdown-profile-menu a {
     text-decoration: none;
-    margin: 0.3rem 0;
-    font-size: 1rem;
-    color: #343a40;
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
-    transition: background 0.2s;
+    margin: 0.15rem 0;
+    font-size: 0.9rem;
+    color: #1f2933;
+    padding: 0.65rem 0.95rem;
+    border-radius: 8px;
+    font-weight: 500;
+    letter-spacing: .2px;
+    transition: background .2s, color .2s;
 }
 .dropdown-profile-menu a:hover {
-    background: #f5f5f5;
+    background: #f1f5f9;
     color: #007bff;
 }
 
@@ -50,8 +57,15 @@ a.active{
     align-items: center;
     width: 14rem;
     height: 9rem;
-    object-fit: contain;
+    justify-content: flex-start;
 }
+ .logo img {
+     width: 100%;
+     height: 100%;
+     object-fit: contain;
+     object-position: left center;
+     max-width: 100%;
+ }
 
 .nav-links {
     display: flex;
@@ -128,7 +142,6 @@ a.active{
     font-size: 0.95rem;
 }
 
-/* Hamburger Menu */
 .hamburger-menu {
     display: none;
     flex-direction: column;
@@ -163,7 +176,7 @@ a.active{
     transform: rotate(-45deg);
 }
 
-/* Mobile Responsive */
+
 @media (max-width: 768px) {
     .header {
         padding: 10px 15px;
@@ -171,24 +184,37 @@ a.active{
         position: relative;
         justify-content: space-between;
     }
-    
-    .hamburger-menu {
+    .hamburger-menu { 
         display: flex;
         order: 1;
+        margin-right: auto;
     }
-    
-    .logo {
+    .header > .container { 
+        order: 3;
+        margin-left: auto;
+        display: flex;
+        background: transparent;
+        box-shadow: none;
+        padding: 0;
+    }
+    .profile {
+         gap:0.5rem;
+          box-shadow:0 2px 8px rgba(0,0,0,0.08);
+    }
+    .profile img { width:35px; height:35px; }
+    .logo { 
         width: 12rem;
         height: 7rem;
         order: 2;
         position: absolute;
         left: 50%;
-        transform: translateX(-50%);
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
-    .logo img {
-        width: 100%;
-        height: auto;
-    }
+    .logo img { width:100%; height:auto; }
     .nav-links {
         display: none;
         position: fixed;
@@ -202,74 +228,57 @@ a.active{
         flex-direction: column;
         justify-content: flex-start;
     }
-    
-    .nav-links.mobile-open {
-        display: flex;
+    .nav-links.mobile-open { 
+        display: flex; 
     }
-    
-    .nav-links ul {
-        flex-direction: column;
-        gap: 0;
-        width: 100%;
+    .nav-links ul { 
+        flex-direction: column; 
+        gap: 0; 
+        width: 100%; 
     }
-    
-    .nav-links li {
-        width: 100%;
+    .nav-links li { 
+        width: 100%; 
     }
-    
-    .nav-links a {
-        padding: 1rem 2rem;
-        width: 100%;
-        justify-content: flex-start;
-        border-radius: 0;
-        border-bottom: 1px solid #f0f0f0;
+    .nav-links a { 
+        padding: 1rem 2rem; 
+        width: 100%; 
+        justify-content: flex-start; 
+        border-radius: 0; 
+        border-bottom: 1px solid #f0f0f0; 
     }
-    
-    .nav-links a:hover {
-        background-color: #f8f9fa;
+    .nav-links a:hover { 
+        background-color: #f8f9fa; 
     }
-    
-    .profile {
-        gap: 0.5rem;
-        order: 3;
+    .profile span { 
+        font-size: 0.9rem; 
     }
-    
-    .profile img {
-        width: 35px;
-        height: 35px;
+    .dropdown-profile-menu { 
+        top: 72px; 
+        right: 12px; 
+        left: auto; 
+        min-width: 200px; 
+        max-width: 88vw; 
+        border-radius: 16px; 
+        padding: .6rem .4rem .7rem; 
     }
-    
-    .profile span {
-        font-size: 0.9rem;
+    .dropdown-profile-menu a { 
+        font-size: 0.95rem; 
+        padding: .75rem 1rem; 
     }
-    .dropdown-profile-menu {
-        position: absolute;
-        top: 3.5rem;
-        right: 0;
-        left: auto;
-        min-width: 150px;
-        max-width: 90vw;
-        width: max-content;
-        background-color: #fff;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        border-radius: 8px;
-        z-index: 1000;
-        flex-direction: column;
-        padding: 0.5rem 0.2rem;
-    }
-    .dropdown-profile-menu a {
-        text-decoration: none;
-        margin: 0.3rem 0;
-        font-size: 1rem;
-        color: #343a40;
-        padding: 0.5rem 1rem;
-        border-radius: 6px;
-        transition: background 0.2s;
-    }
-    .dropdown-profile-menu a:hover {
-        background: #f5f5f5;
-        color: #007bff;
-    }
+}
+
+.dropdown-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.25);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    z-index: 1100;
+    animation: fadeIn .25s ease;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 @media (max-width: 480px) {

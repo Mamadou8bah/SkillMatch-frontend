@@ -80,20 +80,32 @@ function Header() {
         </ul>
       </div>
       <div className="container" style={{ position: 'relative' }}>
-        <div className="profile" onClick={toggleDropdown} ref={profileRef} tabIndex={0} style={{ outline: 'none' }}>
+        <div
+          className="profile"
+          onClick={toggleDropdown}
+          ref={profileRef}
+          tabIndex={0}
+          aria-haspopup="true"
+          aria-expanded={isDropdownOpen}
+          style={{ outline: 'none' }}
+        >
           <img src={profileImg} alt="Profile" />
         </div>
         <div
           className={`dropdown-profile-menu${isDropdownOpen ? ' open' : ''}`}
           ref={dropdownRef}
+          role="menu"
         >
-          <a href="/profile" onClick={toggleDropdown}>My Profile</a>
-          <a href="/application" onClick={toggleDropdown}>My Applications</a>
-          <a href="/messages" onClick={toggleDropdown}>Messages</a>
-          <a href="/settings" onClick={toggleDropdown}>Settings</a>
-          <a href="/logout" onClick={toggleDropdown}>Logout</a>
+          <a role="menuitem" href="/profile" onClick={toggleDropdown}>My Profile</a>
+          <a role="menuitem" href="/application" onClick={toggleDropdown}>My Applications</a>
+          <a role="menuitem" href="/messages" onClick={toggleDropdown}>Messages</a>
+          <a role="menuitem" href="/settings" onClick={toggleDropdown}>Settings</a>
+          <a role="menuitem" href="/logout" onClick={toggleDropdown}>Logout</a>
         </div>
       </div>
+      {isDropdownOpen && (
+        <div className="dropdown-overlay" onClick={() => setIsDropdownOpen(false)} aria-hidden="true" />
+      )}
     
       
 
