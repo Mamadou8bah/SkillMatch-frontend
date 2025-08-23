@@ -27,9 +27,9 @@ function Navbar({ isOpen, onClose }) {
             <i className="fa-solid fa-building"></i>
             <span>Companies</span>
           </a>
-          <a href="/" className='menu-item'>
+          <a href="/candidates" className='menu-item'>
            <i className="fa-solid fa-users"></i>
-            <span>Employees</span>
+            <span>Candidates</span>
           </a>      
       </div>
       <div className='other-menu'>

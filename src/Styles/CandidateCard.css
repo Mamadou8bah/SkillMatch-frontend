@@ -1,0 +1,190 @@
+.candidate-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+  min-height: 380px;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.candidate-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+}
+
+.candidate-card .profile {
+  display: flex;
+  gap: .9rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.candidate-card img {
+  width: 5rem;
+  height: 5rem;
+  object-fit: contain;
+  border-radius: 50%;
+  background: #fafafa;
+  border: 1px solid #e5e5e5;
+}
+
+.candidate-card .name-profession h4 {
+  margin: 0 0 4px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.see-details{
+    display: flex;
+    justify-content: center;
+    color: #fff;
+}
+.candidate-profile-header{
+    display: flex;
+    gap: .9rem;
+}
+.candidate-card .profession {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  font-size: .75rem;
+  font-weight: 500;
+  color: #555;
+}
+
+
+.candidate-card .skills ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.name-profession{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 4rem;
+  flex: 1 1 160px;
+}
+.location{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #666;
+    font-size: .75rem;
+}
+
+.candidate-card .skills li {
+  padding: 4px 8px;
+  font-size: .63rem;
+  font-weight: 500;
+  background-color: #e5e5e5;
+  color: #5d5e61;
+}
+
+.candidate-card .bio {
+  font-size: .75rem;
+  line-height: 1.4;
+  color: #444;
+  max-height: 140px;
+  overflow: hidden;
+  position: relative;
+  flex-grow: 1;
+}
+
+.candidate-card .bio::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background: linear-gradient(transparent, #fff);
+  pointer-events: none;
+}
+
+.candidate-card .see-details {
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+  padding-top: 0.25rem;
+}
+
+.candidate-card .details-btn {
+  background: #48d2eb;
+  color: #fff;
+  font-size: .7rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 18px;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+
+.candidate-card a,
+.candidate-card a:link,
+.candidate-card a:visited,
+.candidate-card a:hover,
+.candidate-card a:active {
+  text-decoration: none !important;
+  color: inherit;
+}
+
+.see-details-link { 
+    text-decoration:none !important; 
+    display:block; 
+}
+.see-details-link:focus-visible {
+     outline:2px solid #48d2eb;
+     outline-offset:2px; 
+}
+
+.candidate-name-link {
+     font-weight:600;
+      color:#0f172a; 
+      text-decoration:none;
+}
+.candidate-name-link:hover { 
+    color:#1d4ed8; 
+    text-decoration:none; 
+}
+.candidate-name-link:focus-visible { 
+    outline:2px solid #1d4ed8; 
+    outline-offset:2px; 
+    border-radius:4px; 
+}
+
+.candidate-card .details-btn { text-decoration:none; }
+
+@media (max-width: 860px) {
+  .candidate-card img { width: 4.25rem; height: 4.25rem; }
+}
+
+@media (max-width: 640px) {
+  .candidate-card {
+    padding: .85rem;
+    min-height: 320px;
+  }
+  .candidate-card img {
+    width: 54px;
+    height: 54px;
+  }
+  .candidate-card .skills li {
+    font-size: .6rem;
+  }
+  .candidate-card .profile { 
+    flex-direction: row;
+ }
+}

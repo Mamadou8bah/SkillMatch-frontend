@@ -1,0 +1,140 @@
+html, body, #root, .App {
+    height: 100%;
+}
+.candidates-page {
+    background-color: #ffffff;
+    min-height: 100dvh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+a {
+    text-decoration: none !important;
+}
+
+@media (max-width:684px) {
+    .total-candidates{
+        display: none;
+    }
+}
+body {
+    background:#ffffff;
+}
+.search-button{
+    height: 3rem;
+    width: 4.5rem;
+    background-color: black;
+    color: #ffffff;
+    border-radius: 10px;
+    font-weight: bold;
+}
+.search-button:hover {
+    background-color: #333333;
+}
+.filter-profession {
+    display: flex;
+    align-items: center;
+    margin: 1rem 1rem;
+}
+.filter-profession label {
+    margin-right: 0.5rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+.filter-profession select{
+    border-radius: 5px;
+    padding: 0.5rem;
+    border: none;
+    background-color: #f0f0f0;
+    font-size: 1rem;
+}
+.option {
+    padding: 0.5rem;
+    border: 1px solid #cccccc;
+}
+.option:hover {
+    background-color: #f0f0f0;
+}
+.option:focus{
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+.profession-filter:focus-within {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+    outline: none;
+
+}
+
+.candidates-toolbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem 1.25rem 1rem;
+    margin: 0;
+    background: #f8f9fa;
+    border-radius: 8px;
+    margin: 0 1rem 1rem 1rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.total-candidates {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #374151;
+}
+
+.filter-candidates {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.filter-candidates label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #6b7280;
+}
+
+.candidates-toolbar select {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    background: #ffffff;
+    font-size: 0.875rem;
+    color: #374151;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.candidates-toolbar select:hover {
+    border-color: #9ca3af;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.candidates-toolbar select:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+@media (max-width: 768px) {
+  .candidates-toolbar {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+  
+  .filter-candidates {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .candidates-toolbar select {
+    min-width: 150px;
+  }
+}

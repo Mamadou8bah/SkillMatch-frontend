@@ -14,7 +14,7 @@ function Footer() {
             <li><a href="/jobs">Jobs</a></li>
             <li><a href="/resume-builder">Resume Builder</a></li>
             <li><a href="/companies">Companies</a></li>
-            <li><a href="/employees">Employees</a></li>
+            <li><a href="/candidates">Candidates</a></li>
           </ul>
         </div>
         <div className="contact-info">
