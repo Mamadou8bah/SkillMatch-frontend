@@ -69,7 +69,33 @@ export const CandidateDetailsPage = () => {
             ))}
             </ul>
           </div>
+        </div>
+        <div className="cd-educations">
+          <h4 className='section-title'>Education History</h4>
+          <div className="cd-education">
+            <ul>
+              {candidate.education.map((education)=>(
+                <div className="cd-education item">
+                  <h5 className="jd-description">- {education.course}</h5>
+                  <p>{education.institution}</p>
+                </div>
+              ))}
+            </ul>
+          </div>
+        </div>
 
+        <div className="cd-contact-details">
+             <h4 className='section-title'>Contact Details</h4>
+              <div className="cd-contact-methods">
+                <div className="cd-contact-item">
+                  <i className="fa-solid fa-phone"></i>
+                  <a href={`tel:${candidate.phone}`} aria-label={`Call ${candidate.fullName}`}>{candidate.phone}</a>
+                </div>
+                <div className="cd-contact-item">
+                  <i className="fa-solid fa-envelope"></i>
+                  <a href={`mailto:${candidate.email}`} aria-label={`Email ${candidate.fullName}`}>{candidate.email}</a>
+                </div>
+              </div>
         </div>
 
         

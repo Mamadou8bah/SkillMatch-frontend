@@ -72,3 +72,16 @@
     border-radius: 20px;
     box-shadow: 2px 1px 2px 0 rgb(236, 234, 234);
 }
+.cd-educations{
+    margin-top: 0.3rem;
+    padding: 1rem;
+    border-radius: 20px;
+    box-shadow: 2px 1px 2px 0 rgb(236, 234, 234);
+}
+.cd-contact-details{
+    margin-top: 0.3rem;
+     padding: 1rem;
+    border-radius: 20px;
+    margin-bottom: 3rem;
+    box-shadow: 2px 1px 2px 0 rgb(236, 234, 234);
+}
