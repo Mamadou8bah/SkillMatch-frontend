@@ -101,6 +101,10 @@ export const CandidateDetailsPage = () => {
         
         </div>
 
+        <div className="similar-candidates">
+          <h3>Similar Candidates</h3>
+        </div>
+
     </div>
   )
 }
