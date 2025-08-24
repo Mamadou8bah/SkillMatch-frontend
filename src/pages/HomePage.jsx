@@ -4,6 +4,8 @@ import Footer from "../components/Footer";
 import '../Styles/HomePage.css';
 
 import { jobs } from "../data/jobs";
+import { candidates } from "../data/candidate";
+import CandidateCard from "../components/CandidateCard";
 function HomePage() {
   return (
     <div className="home-page" >
@@ -43,9 +45,11 @@ function HomePage() {
             <h2>Featured Candidates</h2>
             <a href="">See All<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg></a>
         </div>
-        <div className="candidate-list">
-          
-        </div>
+          <div className="candidates-list" style={{display:'grid',gap:'1.5rem',padding:'1rem',gridTemplateColumns:'repeat(auto-fill,minmax(280px,1fr))'}}>
+        {candidates.slice(0,4).map(c => (
+          <CandidateCard key={c.id} candidate={c} />
+        ))}
+       </div>
         <div className="featured-candidates-footer">
             <a href="">See Candidates</a>
         </div>
@@ -144,7 +148,7 @@ function HomePage() {
             </div>
           </div>
       </div>
-  <Footer />
+      <Footer />
       </div>
 
   );

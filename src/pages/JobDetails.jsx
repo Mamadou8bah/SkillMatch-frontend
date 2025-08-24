@@ -15,7 +15,7 @@ export const JobDetails = () => {
 
   const posted = new Date(job.postedDate).toLocaleDateString();
 
-  // Similar jobs: match on level or location type, exclude current job
+
   const similarJobs = jobs
     .filter(j => j.id !== job.id && (j.level === job.level || j.location.type === job.location.type))
     .slice(0, 3);
