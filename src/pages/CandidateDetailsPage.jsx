@@ -1,5 +1,5 @@
 import React from 'react'
-import { useParams,useNavigate } from 'react-router-dom'
+import { useParams,useNavigate, Link } from 'react-router-dom'
 import { candidates } from '../data/candidate'
 import '../Styles/CandidateDetailsPage.css'
 export const CandidateDetailsPage = () => {
@@ -7,13 +7,18 @@ export const CandidateDetailsPage = () => {
 
   const candidate=candidates.find(c=>c.id === parseInt(id));
 
+  const similarCandidates=candidates.filter(
+    c=>c.id!==candidate.id &&(c.profession===candidate.profession)
+    
+  )
+
   const navigate=useNavigate()
   if (!candidate) {
     return <div className="job-details-empty">Candidate not found.</div>;
   }
 
   return (
-    <div className="candidate-details-page">
+    <div className="cd-page">
         <div className="cd-main" >
           <div className="jd-header-row">
           <button className="jd-back" onClick={() => navigate(-1)} aria-label="Go back">
@@ -103,6 +108,33 @@ export const CandidateDetailsPage = () => {
 
         <div className="similar-candidates">
           <h3>Similar Candidates</h3>
+
+          <div className="similar-candidates-list">
+            <ul>
+              {similarCandidates.map(
+                (c)=>(
+                 <Link to={`/candidates/${c.id}`}>
+                  <div className="sc-profile">
+                    <div className="sc-profile-pic">
+                      <img src={c.profilePic} alt={c.fullName} />
+                    </div>
+                    <div className="sc-other-details">
+                      <h4 className="sc-name">
+                        {c.fullName}
+                      </h4>
+                      <p className="sc-profession">
+                        {c.profession}
+                      </p>
+                      <p className="sc-location">
+                        {c.location}
+                      </p>
+                    </div>
+                  </div>
+                 </Link>
+                )
+              )}
+            </ul>
+          </div>
         </div>
 
     </div>

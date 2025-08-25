@@ -14,7 +14,7 @@
     gap: 0.3rem;
 }
 .cd-main{
-    width: 50%;
+    width: 60%;
     margin: 1.3rem;
 }
 @media (max-width:64rem) {
@@ -88,4 +88,42 @@
     border-radius: 20px;
     margin-bottom: 3rem;
     box-shadow: 2px 1px 2px 0 rgb(236, 234, 234);
+}
+
+.cd-page{
+    display: flex;
+    flex-direction: row;
+}
+.similar-candidates{
+    margin: 3rem;
+    text-align: center;
+    justify-content: center;
+    width: 30%;
+
+}
+.similar-candidates h3{
+    text-align: center;
+    align-self: center;
+    justify-content: center;
+    font-weight: 500;
+}
+
+.sc-profile-pic{
+    
+    height: 5rem;
+    display: flex;
+}
+@media (max-width:64rem) {
+    .cd-page{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .similar-candidates{
+        margin: 1rem;
+        width: 100%;
+    }
+    .cd-contact-details{
+    margin-bottom: 1rem;
+   }
 }

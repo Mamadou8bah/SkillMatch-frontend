@@ -185,7 +185,7 @@ export const candidates=[
         id:6,
     fullName:"Ebrima Njie",
     profilePic: profileImg,
-        profession:"Mobile Developer",
+        profession:"Frontend Developer",
         email:"ebrima.njie@example.com",
         phone:"+2207012234",
         skills:["React Native","TypeScript","Expo","State Management","Mobile UI","REST APIs","Performance Optimization","Testing"],
